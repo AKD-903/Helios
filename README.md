@@ -1,2 +1,2 @@
-# helios
+# Helios
 Project for IFE
