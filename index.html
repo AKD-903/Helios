@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport"content="width=device-width, initial-scale=1.0">
-    <title>Helios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helios PROTOTYPE</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        text-align: center;
-        min-height:200vh;
-        background: rgb(244,187,155);
-        background: linear-gradient(rgba(244,187,155,0.5), rgba(255,175,163,0.5), rgba(232,90,125,0.3), rgba(230,72,72,0.3), rgba(244,128,65,0.3), rgba(243,164,69,0.3));
-        border:10px solid black;
-        border-image-slice:1;
-        border-image-source: linear-gradient(rgba(244,187,155,1), rgba(255,175,163,1), rgba(232,90,125,1), rgba(230,72,72,1), rgba(244,128,65,1), rgba(243,164,69,1));
-      }
-      .banner {
-        display: flex;
-        align-items: center;
-        background-color: palevioletred;
-        padding-top: 5px;
-        width: 100%;
-        height: 50px;
-      }
-
-      #banner1 {
-        margin: 0 0 0 100px; 
-      }
-
-      #banner2 {
-        margin: 0 25px; 
-      }
-
-      #text {
-        font-weight: normal;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="banner">
-      <h3 id="banner1">HELIOS</h3>
-      <p id="banner2">Make hundreds every month with no money required and zero effort-- why hesitate?</p>
-      <i id="icon" class="fa-solid fa-user"></i></div>
-      <br>
-      <h2>Bringing the energy of the sun to your home</h2>
-      <h3 id="text">Power your house in just a few clicks!</h3>
-      <button>Start saving!</button>
-    <script src="script.js"></script>
-  </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mako&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navContainer">
+        <button class="menuButton" onclick="toggleMenu()">☰</button>
+        <ul class="navBar">
+            <li class="nav"><img alt="Helios Logo" height="25" src="logo.png"></img></li>
+            <li class="nav click"><a href="index.html">Home</a></li>
+            <li class="nav click"><a href="">Learn More</a></li>
+            <li class="nav quote" style="font-style:italic">Making money by paying bills</li>
+            <li class="nav click">About Us</li>
+            <li class="nav click" id="userProfile"><i id="icon" class="fa-solid fa-user"></i></li>
+        </ul> 
+    </div>
+    <br><br>
+    <h1>Bringing the energy of the sun to your home</h1>
+    <h2>Power your house in just a few clicks!</h2>
+    <button>Start saving!</button>
+    <script src="index.js"></script>
+</body>
 </html>
 
+<!-- 
+to do:
+
+HTML
+- add icons (logo, user profile)
+- create other html files for other pages
+- add pics
+
+CSS
+- fix the background?
+- fix the colors!!
+- the margins...
+
+JS
+- animations?
+- any kind of fade in / transition
+- buttons/forms
+-->
