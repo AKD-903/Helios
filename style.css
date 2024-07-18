@@ -13,7 +13,7 @@ p{
     font-family:"PT Serif", Georgia, 'Times New Roman', Times, serif;
     padding:10px;
 }
-button{
+button,.button{
     font-family:"PT Serif", Georgia, 'Times New Roman', Times, serif;
     padding:10px;
     display:block;
@@ -30,6 +30,8 @@ h2,h3{
     font-family:"Mako",'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding:10px;
 }
+
+
 
 .mainScreen{
     min-height: 90vh;
@@ -66,6 +68,8 @@ h2,h3{
     box-shadow:5px 5px rgba(243,164,69,0.5); 
 }
 
+
+
 .learnMoreMain{
     width: 100%;
     margin:5vh 0 0 0;
@@ -86,20 +90,24 @@ h2,h3{
 }
 #learnMoreMain{
     margin:40px auto auto auto;
+    padding:25px;
     background-color:rgba(232,90,125,1);
     color:white;
-    height:60px;
     width:25vw;
     min-width:133px;
     font-size:larger;
     border-radius:10px;
     box-shadow:5px 5px rgba(232,90,125,0.5);
+    text-align:center;
+    text-decoration:none;
 }
 #learnMoreMain:hover{
     background-color:rgba(232,90,125,0.5);
     border:5px solid rgba(232,90,125,1);
     box-shadow:5px 5px rgba(232,90,125,1);
 }
+
+
 
 .navBar{
     list-style-type:none;
