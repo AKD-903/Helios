@@ -1,50 +1,104 @@
 body{
-    min-height:200vh;
     /*background: linear-gradient(rgba(244,187,155,0.3), rgba(255,175,163,0.3), rgba(232,90,125,0.2), rgba(230,72,72,0.2), rgba(244,128,65,0.2), rgba(243,164,69,0.2));*/
     border:10px solid;
     border-image-slice:1;
     border-image-source: linear-gradient(rgba(244,187,155,1), rgba(255,175,163,1), rgba(232,90,125,1), rgba(230,72,72,1), rgba(244,128,65,1), rgba(243,164,69,1));
     transition-duration:0.5s;
+    margin:0;
 }
-p,a,li,button{
+a,li{
     font-family:"PT Serif", Georgia, 'Times New Roman', Times, serif;
-    font-family:"Rambla", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p{
+    font-family:"PT Serif", Georgia, 'Times New Roman', Times, serif;
+    padding:10px;
+}
+button{
+    font-family:"PT Serif", Georgia, 'Times New Roman', Times, serif;
+    padding:10px;
+    display:block;
+    margin:auto;
+    border:0;
+    border-radius:25px;
+    transition-duration:0.25s;
 }
 h1{
     font-family:"Rambla", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin:20px auto auto 20px;
+    padding:10px;
+}
+h2,h3{
+    font-family:"Mako",'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:10px;
+}
+
+.mainScreen{
+    min-height: 90vh;
+}
+#mainH1{
+    font-family:"Rambla", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:50px 10px;
     text-align:center;
     font-size:90px;
 }
-h2{
+#mainH2{
     font-family:"Mako",'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin:20px auto auto 20px;
+    margin:25px 10px 75px;
     text-align:center;
-    font-size:55px;
+    font-size:50px;
 }
-h3{
+#mainH3{
     font-family:"Mako",'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin:20px auto auto 20px;
+    margin:115px 10px 50px;
     text-align:center;
     font-size:36px;
     
 }
-
 #startSaving{
-    display:block;
-    margin:auto;
-    height:15vh;
+    height:20vh;
     width:50vw;
+    min-width:382px;
     font-size:36px;
     background-color:rgba(243,164,69,0.5);
-    border:0;
-    border-radius:25px;
-    transition-duration:0.25s;
 }
 #startSaving:hover{
     border:5px solid rgba(243,164,69,0.5);
     background-color:white;
     box-shadow:5px 5px rgba(243,164,69,0.5); 
+}
+
+.learnMoreMain{
+    width: 100%;
+    margin:5vh 0 0 0;
+    padding:30px 0;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2Fc3HczzhNAceOI%2Fgiphy.gif&f=1&nofb=1&ipt=96a8d8208f04a45cbb939d3f88f89b64c190c9b5106612fe27eef00d35e8f6ef&ipo=images");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+
+    color:white;
+    font-style:bold;
+}
+#lmmH1{
+    font-size:50px;
+    text-align:center;
+    padding:0;
+}
+#learnMoreMain{
+    margin:40px auto auto auto;
+    background-color:rgba(232,90,125,1);
+    color:white;
+    height:60px;
+    width:25vw;
+    min-width:133px;
+    font-size:larger;
+    border-radius:10px;
+    box-shadow:5px 5px rgba(232,90,125,0.5);
+}
+#learnMoreMain:hover{
+    background-color:rgba(232,90,125,0.5);
+    border:5px solid rgba(232,90,125,1);
+    box-shadow:5px 5px rgba(232,90,125,1);
 }
 
 .navBar{
@@ -56,7 +110,7 @@ h3{
     top:0;
     left:0;
 
-    background-color:#e64848;
+    background: linear-gradient(90deg,rgba(244,187,155,1), rgba(255,175,163,1), rgba(232,90,125,1), rgba(230,72,72,1), rgba(244,128,65,1), rgba(243,164,69,1));
     width:100vw;
 
     display: flex;
@@ -66,13 +120,14 @@ h3{
 .nav{
     color:white; /*delete*/
     font-size:24px;
+    transition-duration:0.25s;
 }
 .nav>a{
     color:white;
     text-decoration:none;
 }
 .nav.click:hover{
-    background-color:rgb(244,187,155);
+    background-color:rgba(255,255,255,0.5);
 }
 .menuButton {
     display: none;
@@ -85,7 +140,6 @@ h3{
 }
 
 
-/*resize when nav bar is completed*/
 @media only screen and (min-width:625px){
     .navBar{
         position:fixed;
@@ -116,6 +170,7 @@ h3{
         position: fixed;
         top:0;
         right:0;
+        border-radius:3px;
     }
     .navContainer.open .navBar {
         height:auto;
