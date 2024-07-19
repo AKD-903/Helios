@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helios PROTOTYPE</title>
+    <title>Helios</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mako&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <style>
@@ -123,18 +124,28 @@
     <div class="navContainer">
         <button class="menuButton" onclick="toggleMenu()">☰</button>
         <ul class="navBar">
-            <li class="nav"><img alt="Helios Logo" height="25" src="logo.png"></img></li>
+            <li class="nav"><img alt="Helios Logo" height="30" src="logo.png"></li>
+            <li class="nav spacer"></li>
             <li class="nav click"><a href="index.html">Home</a></li>
-            <li class="nav click"><a href="">Learn More</a></li>
-            <li class="nav quote" style="font-style:italic">Making money by paying bills</li>
+            <li class="nav click"><a href="learnMore.html">Learn More</a></li>
             <li class="nav click">About Us</li>
-            <li class="nav click" id="userProfile"><i id="icon" class="fa-solid fa-user"></i></li>
+            <li class="nav click" id="userProfile"><span class="material-symbols-outlined">account_circle</span></li>
         </ul> 
     </div>
-    <br><br>
-    <h1>Bringing the energy of the sun to your home</h1>
-    <h2>Power your house in just a few clicks!</h2>
-    <button>Start saving!</button>
+    
+    <div class="mainScreen">
+        <h3 id="mainH3">Making money by paying bills</h3>
+        <h1 id="mainH1">Earn money with solar panels</h1>
+        <h2 id="mainH2">Pay the same as electricity, save the world</h2>
+        <button id="startSaving"><b>START SAVING</b><br> with free installation</button>
+    </div>
+
+    <div class="learnMoreMain">
+        <h1 id="lmmH1">Protect the Earth While Living Your Life</h1>
+        <p style="text-align:center; font-size:x-large;">Switch to solar with a free installation—start earning without changing your financial lifestyle</p>
+        <a class="button" id="learnMoreMain" href="learnMore.html">Learn more</a>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
@@ -145,12 +156,16 @@ to do:
 HTML
 - add icons (logo, user profile)
 - create other html files for other pages
+    - "start saving" -> a form?
+    - learn more, more info abt solar panels
+    - about us, contact info + info on us
+    - user profile 
 - add pics
 
 CSS
 - fix the background?
 - fix the colors!!
-- the margins...
+- change the max/min px
 
 JS
 - animations?
