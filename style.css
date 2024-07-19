@@ -1,5 +1,5 @@
 body{
-    /*background: linear-gradient(rgba(244,187,155,0.3), rgba(255,175,163,0.3), rgba(232,90,125,0.2), rgba(230,72,72,0.2), rgba(244,128,65,0.2), rgba(243,164,69,0.2));*/
+    min-height:100vh; /*delete*/
     border:10px solid;
     border-image-slice:1;
     border-image-source: linear-gradient(rgba(244,187,155,1), rgba(255,175,163,1), rgba(232,90,125,1), rgba(230,72,72,1), rgba(244,128,65,1), rgba(243,164,69,1));
