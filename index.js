@@ -3,20 +3,22 @@ function toggleMenu() {
     navContainer.classList.toggle('open');
     document.getElementById("userProfile").innerHTML="User Profile";
 }
+let censusTract;
 
-document.getElementById("calculate").addEventListener("click",function(e){
-    e.preventDefault();
-
-    const street=spaceToPlus("111-24 199th St");
+function getCensusTract(){
+    const street=spaceToPlus("111-24 199th Street");
     const city=spaceToPlus("St. Albans");
     const state=spaceToPlus("New York");
     const zip=11412;
-    const url1=`https://geocoding.geo.census.gov/geocoder/geographies/address?street=${street}&city=${city}&state=${state}&zip=${zip}&benchmark=Public_AR_Current&vintage=Current_Current&format=json`;
-    
-    fetch(url1,{headers:{"Accept":"application/json"}})
+    const url1=`http://localhost:4000/geocode?street=${street}&city=${city}&state=${state}&zip=${zip}`;
+
+    fetch(url1)
     .then(x=>x.json())
-    .then(y=>{console.log(y)});
-});
+    .then(y=>{
+        censusTract= y.result.addressMatches[0].geographies["Census Tracts"][0].GEOID;
+        console.log(censusTract);
+    });
+}
 
 function spaceToPlus(str){
     let x="";
