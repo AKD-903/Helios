@@ -198,25 +198,69 @@ h2,h3{
  .aboutUs {
     max-width: 800px;
     margin: 20px auto;
-    padding: 0 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .team-member {
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .team-member img {
-    max-width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
 }
 
 .team-member h3 {
-    margin-top: 0;
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
 }
 
 .team-member p {
     font-style: italic;
     color: #666;
+    margin-bottom: 5px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #666;
+    line-height: 1.8;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
 }
