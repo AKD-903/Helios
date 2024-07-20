@@ -195,7 +195,7 @@ h2,h3{
     }
 }
 
- .aboutUs {
+.aboutUs {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -207,4 +207,10 @@ h2,h3{
 .team-member {
     text-align: center;
     margin-bottom: 30px;
+    width: 45%; /* Adjust width to fit two items per row */
+    display: inline-block; /* Ensures items are in a block and can wrap */
+    vertical-align: top; /* Align items to the top of their container */
+    margin-right: 5%; /* Add spacing between items */
+    margin-bottom: 5%; /* Add spacing between rows */
+    box-sizing: border-box; /* Include padding and border in width */
 }
