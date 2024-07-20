@@ -161,6 +161,7 @@ h2,h3{
         flex-grow: 1;
     }
 }
+
 @media only screen and (max-width:625px){
     .navBar {
         flex-direction: column;
@@ -172,7 +173,7 @@ h2,h3{
         text-align: center;
         padding: 10px;
     }
-    .nav:not(.click){
+    .nav:not(.click) {
         display:none;
     }
     .menuButton {
@@ -183,7 +184,7 @@ h2,h3{
         border-radius:3px;
         transition: transform 0.5s ease-in-out;
     }
-    .menuButton:hover{
+    .menuButton:hover {
         transform: rotate(360deg);
     }
     .navContainer.open .navBar {
@@ -192,4 +193,30 @@ h2,h3{
         padding:0;
         position:fixed;
     }
+}
+
+ .aboutUs {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.team-member {
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    margin-top: 0;
+}
+
+.team-member p {
+    font-style: italic;
+    color: #666;
 }
