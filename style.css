@@ -195,15 +195,6 @@ h2,h3{
     }
 }
 
-
-#aUH3{
-    font-family:"Mako",'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin:115px 10px 50px;
-    text-align:center;
-    font-size:36px;
-    
-}
-
 .team {
     text-align: center;
     margin-bottom: 30px;
@@ -231,4 +222,8 @@ h2,h3{
     content: '';
     display: table;
     clear: both;
+}
+
+#chatBot {
+    align-items: right;
 }
