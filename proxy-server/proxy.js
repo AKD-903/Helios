@@ -9,8 +9,8 @@ app.use((req, res, next) => {
 });
 
 app.get('/geocode', (req, res) => {
-  const { street, city, state, zip } = req.query;
-  const url = `https://geocoding.geo.census.gov/geocoder/geographies/address?street=${street}&city=${city}&state=${state}&zip=${zip}&benchmark=Public_AR_Current&vintage=Current_Current&layers=10&format=json`;
+  const { street, city, zip } = req.query;
+  const url = `https://geocoding.geo.census.gov/geocoder/geographies/address?street=${street}&city=${city}&state=NY&zip=${zip}&benchmark=Public_AR_Current&vintage=Current_Current&layers=10&format=json`;
 
   request(url, (error, response, body) => {
     console.log(url);
