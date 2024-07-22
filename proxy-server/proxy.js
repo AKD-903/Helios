@@ -10,9 +10,10 @@ app.use((req, res, next) => {
 
 app.get('/geocode', (req, res) => {
   const { street, city, state, zip } = req.query;
-  const url = `https://geocoding.geo.census.gov/geocoder/geographies/address?street=${street}&city=${city}&state=${state}&zip=${zip}`;
+  const url = `https://geocoding.geo.census.gov/geocoder/geographies/address?street=${street}&city=${city}&state=${state}&zip=${zip}&benchmark=Public_AR_Current&vintage=Current_Current&layers=10&format=json`;
 
   request(url, (error, response, body) => {
+    console.log(url);
     if (!error && response.statusCode === 200) {
       res.send(body);
     } else {
@@ -21,6 +22,6 @@ app.get('/geocode', (req, res) => {
   });
 });
 
-app.listen(4000, () => {
-  console.log('Proxy server running on port 4000');
+app.listen(3500, () => {
+  console.log('Proxy server running on port 3500');
 });
