@@ -223,7 +223,3 @@ h2,h3{
     display: table;
     clear: both;
 }
-
-#chatBot {
-    align-items: right;
-}
