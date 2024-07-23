@@ -129,9 +129,14 @@ h2,h3{
     font-size:x-large;
 }
 
+.answers{
+    display:flex;
+    justify-content:center;
+}
 .answers .answer{
     float:left;
-    width:30%;
+    width:200px;
+    height:142px;
     text-align:center;
     background-color:rgba(255,175,163,0.25);
     padding:10px 0;
