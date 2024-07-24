@@ -50,7 +50,7 @@ h2,h3{
 }
 #mainH3{
     font-family:"Mako",'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin:115px 10px 50px;
+    margin:20vh 10px 50px;
     text-align:center;
     font-size:36px;
     
@@ -95,7 +95,7 @@ h2,h3{
 
 .learnMoreMain{
     width: 100%;
-    margin:5vh 0 0 0;
+    margin:2.5vh 0 0 0;
     padding:30px 0;
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2Fc3HczzhNAceOI%2Fgiphy.gif&f=1&nofb=1&ipt=96a8d8208f04a45cbb939d3f88f89b64c190c9b5106612fe27eef00d35e8f6ef&ipo=images");
     background-size: cover; 
