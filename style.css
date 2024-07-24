@@ -129,6 +129,7 @@ h2,h3{
     background-color:rgba(232,90,125,0.5);
     border:5px solid rgba(232,90,125,1);
     box-shadow:5px 5px rgba(232,90,125,1);
+    font-weight: bold;
 }
 
 
@@ -196,6 +197,7 @@ h2,h3{
 }
 .nav.click:hover{
     background-color:rgba(255,255,255,0.5);
+    font-weight: bold;
 }
 .menuButton {
     display: none;
