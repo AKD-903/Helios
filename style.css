@@ -1,5 +1,5 @@
 body{
-    min-height:97vh;
+    min-height:98vh;
     border:10px solid;
     border-image-slice:1;
     border-image-source: linear-gradient(rgba(244,187,155,1), rgba(255,175,163,1), rgba(232,90,125,1), rgba(230,72,72,1), rgba(244,128,65,1), rgba(243,164,69,1));
@@ -44,7 +44,7 @@ h2,h3{
 }
 #mainH2{
     font-family:"Mako",'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin:25px 10px 75px;
+    margin:25px 10px 37px;
     text-align:center;
     font-size:50px;
 }
@@ -61,6 +61,7 @@ h2,h3{
     min-width:382px;
     font-size:36px;
     background-color:rgba(243,164,69,0.5);
+    margin-top:37px;
 }
 #startSaving:hover{
     border:5px solid rgba(243,164,69,0.5);
@@ -68,6 +69,29 @@ h2,h3{
     box-shadow:5px 5px rgba(243,164,69,0.5); 
 }
 
+
+.popup{
+    display:none;
+    margin:20px auto;
+    text-align:center;
+    background-color:rgba(230,72,72,1);
+    padding:20px;
+    color:white;
+    width:75vw;
+    border-radius:10px;
+    font-size:x-large;
+}
+.popup p{
+    display:inline;
+}
+.popup input{
+    border:1px solid black;
+}
+.popup select{
+    font-family:"PT Serif", Georgia, 'Times New Roman', Times, serif;
+    border:0;
+    margin-bottom:15px;
+}
 
 
 .learnMoreMain{

@@ -28,7 +28,24 @@
         <h3 id="mainH3">Making money by paying bills</h3>
         <h1 id="mainH1">Earn money with solar panels</h1>
         <h2 id="mainH2">Pay the same as electricity, save the world</h2>
-        <button onclick="location.href='learnMore.html';" id="startSaving" href="learnMore.html"><b>START SAVING</b><br> with free installation</button>
+        <div class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span><br>
+                <p>Email</p><br>
+                <input id="popupEmail"></input><br><br>
+                <p>Borough</p><br>
+                <select id="popupBorough">
+                    <option>Not sharing</option>
+                    <option>Bronx</option>
+                    <option>Brooklyn</option>
+                    <option>Nassau County</option>
+                    <option>Queens</option>
+                    <option>Suffolk County</option>
+                </select>
+                <button onclick="submitPopup()">Submit</button>
+            </div>
+        </div>
+        <button onclick="openPopup()" id="startSaving" href="learnMore.html"><b>START SAVING</b><br> with free installation</button>
     </div>
 
     <div class="learnMoreMain">
@@ -37,6 +54,7 @@
         <a class="button" id="learnMoreMain" href="learnMore.html">Learn more</a>
     </div>
 
+    <div id="users">hello</div>
     <script src="index.js"></script>
 </body>
 </html>

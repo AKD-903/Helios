@@ -4,16 +4,25 @@ function toggleMenu() {
     document.getElementById("userProfile").innerHTML="User Profile";
 }
 
-document.getElementById("submit").addEventListener("click",async function(){
-    const censusTract=await getCensusTract();
-    console.log(censusTract);
-    const sunroofObj=await getSunroof(censusTract);
-    console.log(sunroofObj);
+try {
+    const submitButton = document.getElementById("submit");
+    if (!submitButton) {}
 
-    document.getElementById("censusTractP").innerHTML=censusTract;
-    document.getElementById("medPanelsP").innerHTML=sunroofObj.number_of_panels_median;
-    document.getElementById("medKWP").innerHTML=sunroofObj.kw_median;
-})
+    submitButton.addEventListener("click", async function() {
+        try {
+            const censusTract = await getCensusTract();
+            console.log(censusTract);
+            const sunroofObj = await getSunroof(censusTract);
+            console.log(sunroofObj);
+
+            document.getElementById("censusTractP").innerHTML = censusTract;
+            document.getElementById("medPanelsP").innerHTML = sunroofObj.number_of_panels_median;
+            document.getElementById("medKWP").innerHTML = sunroofObj.kw_median;
+        } catch (error) {
+            console.error('An error occurred while processing the click event:', error);
+        }
+    });
+} catch (error) {}
 
 async function getCensusTract(){
     const street=spaceToPlus(document.getElementById("streetName").value);
@@ -37,4 +46,35 @@ async function getSunroof(censusTract){
 
 function spaceToPlus(str){
     return str.replace(/ /g, '+');
+}
+
+
+function openPopup(){
+    document.getElementsByClassName("popup")[0].style.display="block";
+}
+function closePopup(){
+    document.getElementsByClassName("popup")[0].style.display="none";
+}
+
+async function submitPopup(){
+    let popupEmail=document.getElementById("popupEmail").value;
+    let popupBorough=document.getElementById("popupBorough").value;
+    
+    const response = await fetch('http://localhost:3500/addUser', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: popupEmail, borough: popupBorough })
+    });
+
+    const result = await response.text();
+    fetchUsers();
+    closePopup();
+}
+
+async function fetchUsers() {
+    const response = await fetch('http://localhost:3500/users');
+    const users = await response.json();
+    users.forEach(user => {
+      console.log(`ID: ${user.id}, Email: ${user.email}, Borough: ${user.borough}`);
+    });
 }
