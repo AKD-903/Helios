@@ -69,7 +69,6 @@ h2,h3{
     box-shadow:5px 5px rgba(243,164,69,0.5); 
 }
 
-
 .popup{
     display:none;
     margin:20px auto;
@@ -102,7 +101,8 @@ h2,h3{
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 0 100px rgba(0,0,0,0.1);
+
 
     color:white;
     font-style:bold;
@@ -221,6 +221,7 @@ h2,h3{
         flex-grow: 1;
     }
 }
+
 @media only screen and (max-width:625px){
     .navBar {
         flex-direction: column;
@@ -232,7 +233,7 @@ h2,h3{
         text-align: center;
         padding: 10px;
     }
-    .nav:not(.click){
+    .nav:not(.click) {
         display:none;
     }
     .menuButton {
@@ -243,7 +244,7 @@ h2,h3{
         border-radius:3px;
         transition: transform 0.5s ease-in-out;
     }
-    .menuButton:hover{
+    .menuButton:hover {
         transform: rotate(360deg);
     }
     .navContainer.open .navBar {
